@@ -2,11 +2,11 @@
 
 def select_sort(ls):
     list_count = len(ls)
-    for i in range(list_count):
-       for j in range(list_count - 1): 
-            if ls[j+1] < ls[j]: 
-                temp = ls[j+1]
-                ls[j+1] = ls[j]
+    for i in range(0, list_count-1):
+       for j in range(i+1, list_count): 
+            if ls[i] > ls[j]: 
+                temp = ls[i]
+                ls[i] = ls[j]
                 ls[j] = temp
     return ls
 

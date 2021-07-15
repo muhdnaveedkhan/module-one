@@ -193,7 +193,7 @@ for i in range(2, 11):
 '''
 
 #Program 13: WAP to print Prime numbers between 1 to 100.
-
+'''
 for i in range(1, 100):
     j = 2
     while (j <= i//2):
@@ -203,14 +203,54 @@ for i in range(1, 100):
     if(j > i//2):
         print(i)
 
-
-
-
+'''
 
 #Program 14: WAP to calculate HCF of two numbers.
+'''
+first_no = int(input("Enter first number : "))
+second_no = int(input("Enter second number : "))
+
+small = 0
+small = first_no if first_no < second_no else second_no
+
+for i in range(small, 0, -1):
+    if first_no%i == 0 and second_no%i == 0:
+        print("HCF is ", i)
+        break
+'''
+
 #Program 15: WAP to calculate LCM of two numbers.
+'''
+first_no = int(input("Enter first number : "))
+second_no = int(input("Enter second number : "))
+
+big_no = 0
+big_no = first_no if first_no > second_no else second_no
+
+for i in range(1, (first_no*second_no)+1):
+    if i%first_no == 0 and i%second_no == 0:
+        print("LCM is ", i)
+        break
+'''
+
+
 #Program 16: WAP to calculate HCF and LCM of two numbers.
 
+first_no = int(input("Enter first number : "))
+second_no = int(input("Enter second number : "))
+small = 0
+big_no = 0
+small = first_no if first_no < second_no else second_no
+big_no = first_no if first_no > second_no else second_no
+
+for i in range(small, 0, -1):
+    if first_no%i == 0 and second_no%i == 0:
+        print("HCF is ", i)
+        break
+for i in range(1, (first_no*second_no)+1):
+    if i%first_no == 0 and i%second_no == 0:
+        print("LCM is ", i)
+        break
 
 
 

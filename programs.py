@@ -235,7 +235,23 @@ for i in range(1, (first_no*second_no)+1):
 
 
 #Program 16: WAP to calculate HCF and LCM of two numbers.
+# LCM x HCF = first_no x second_no 
+# LCM  = (first_no x second_no)/ HCF
 
+first_no = int(input("Enter first number : "))
+second_no = int(input("Enter second number : "))
+small = 0
+small = first_no if first_no < second_no else second_no
+for i in range(small, 0, -1):
+    if first_no%i == 0 and second_no%i == 0:
+        print("HCF is ", i)
+        print("LCM is ", (first_no*second_no)//i)
+        break
+
+
+
+
+'''
 first_no = int(input("Enter first number : "))
 second_no = int(input("Enter second number : "))
 small = 0
@@ -251,7 +267,7 @@ for i in range(1, (first_no*second_no)+1):
     if i%first_no == 0 and i%second_no == 0:
         print("LCM is ", i)
         break
-
+'''
 
 
 
